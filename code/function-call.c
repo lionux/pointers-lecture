@@ -5,19 +5,20 @@ int addOne(int x)
   return x;
 }
 
-int addOne_by_pointer(int *x)
+int addOnePointer(int *x)
 {
-  *x = *x+1;
+  *x = *x + 1;
   return *x;
 }
+
 int main()
 {
   int x = 1;
-  int y = addOne(x);
-  printf("x: %d, y: %d\n",x,y);
+  int a = addOne(x);
+  printf("x: %d, a1: %d\n",x,a);
 
-  int z = addOne_by_pointer(&x);
-  printf("x: %d, z: %d\n",x,z);
+  int b = addOnePointer(&x);
+  printf("x: %d, a2: %d\n",x,b);
   return 0;
 }
 
